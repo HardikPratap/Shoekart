@@ -5,13 +5,7 @@ const cors = require("cors");
 const connectDatabase = require("./db/connect");
 const errorHandlerMiddleware = require("./middleware/error");
 
-app.use(
-  cors({
-    origin: "http://localhost:5173", // Allow only your frontend origin
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Set to true if you need to allow credentials
-  })
-);
+app.use(cors());
 
 app.use(express.static("./public"));
 
