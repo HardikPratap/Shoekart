@@ -16,6 +16,7 @@ import { LoadingContext } from "./HomeLayout";
 const LandingPage = () => {
   const { data, setData } = useContext(LoadingContext);
   const trendingRef = useRef(null);
+  console.log(import.meta.env.VITE_BACKEND_URL)
   const scrollToTop = () => {
     trendingRef.current.scrollIntoView({ behavior: "smooth" });
   };

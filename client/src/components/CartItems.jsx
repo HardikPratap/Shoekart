@@ -27,7 +27,7 @@ const CartItems = ({ cartId, data, qty, size, deleteItem, updateData }) => {
   const changeQty = async () => {
     try {
       const response = await Axios.put(
-        `/cart/update/${cartId}`,
+        `http://localhost:5001/api/v1/cart/update/${cartId}`,
         {
           qty: debounceQty,
         },
